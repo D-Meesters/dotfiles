@@ -178,6 +178,8 @@ bindsym $mod+r mode "resize"
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+floating_maximum_size 1366 x 768
+
 default_border pixel 1
 default_floating_border pixel 1
 
@@ -191,8 +193,8 @@ bar {
   position top
   i3bar_command i3bar -t
   colors {
-    # background #20242c
-    background #00000000
+    background #20242c
+    #background #00000000
     statusline #4c7899
     separator #4c7899
     focused_workspace  #00000000 #4c7899   #ffffff
@@ -207,4 +209,5 @@ bar {
 
 exec xwallpaper --zoom ~/.local/share/bg.jpg &
 exec picom &
-exec xfce4-power-manager &
+exec xfce4-power-manager --daemon &
+exec xrdb merge ~/.Xresources &
