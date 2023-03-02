@@ -1,0 +1,9 @@
+#!/bin/sh
+
+while read file
+do 
+  case "$1" in
+    "d") mv "$file" ~/.local/trash ;;
+    "w") setbg "$file" ;;
+  esac
+done
